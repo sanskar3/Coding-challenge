@@ -41,6 +41,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         Picasso.get().load(listItem.getImageUrl()).into(holder.imageView);
 
+        holder.textViewStar.setText(String.valueOf(listItem.getRating()));
+
 
     }
 
@@ -54,6 +56,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         public TextView textViewHead;
         public TextView textViewDesc;
         public ImageView imageView;
+        public TextView  textViewStar;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,6 +64,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             textViewHead = (TextView) itemView.findViewById(R.id.name);
             textViewDesc = (TextView) itemView.findViewById(R.id.language);
             imageView = (ImageView) itemView.findViewById(R.id.userPic);
+            textViewStar= itemView.findViewById(R.id.star);
         }
     }
 }

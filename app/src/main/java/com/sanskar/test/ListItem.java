@@ -5,6 +5,7 @@ public class ListItem {
     private String head;
     private String desc;
     private String imageUrl;
+    private int rating;
 
     public String getImageUrl() {
         return imageUrl;
@@ -14,10 +15,15 @@ public class ListItem {
         this.imageUrl = imageUrl;
     }
 
-    public ListItem(String head, String desc, String imageUrl) {
+    public int getRating() {
+        return rating;
+    }
+
+    public ListItem(String head, String desc, String imageUrl, int rating) {
         this.head = head;
         this.desc = desc;
         this.imageUrl = imageUrl;
+        this.rating= rating;
     }
 
     public String getHead() {

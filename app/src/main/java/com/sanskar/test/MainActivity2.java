@@ -72,7 +72,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject o = array.getJSONObject(i);
-                        ListItem item = new ListItem(o.getString("name"), o.getString("language"), o.getString("avatar_url"));
+                        ListItem item = new ListItem(o.getString("name"), o.getString("language"),o.getJSONObject("owner").getString("avatar_url"),o.getInt("stargazers_count"));
 
                         listItems.add(item);
                     }
